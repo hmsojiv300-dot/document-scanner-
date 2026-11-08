@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b5d">
+<title>Smart Document Scanner & PDF Editor</title>
+<style>
+:root{--navy:#123b5d;--blue:#176b87;--bg:#f3f6f8;--ink:#18232d;--muted:#647481;--line:#dce4e9}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#123b5d,#176b87);color:#fff;padding:22px max(18px,calc((100% - 1100px)/2))}
+header h1{font-size:clamp(21px,4vw,30px);margin:0 0 5px}
+header p{margin:0;color:#dcecf2}
+.wrap{max-width:1100px;margin:20px auto;padding:0 14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+button,.btn{border:0;border-radius:10px;padding:10px 14px;background:var(--navy);color:white;font-weight:600;cursor:pointer}
+button.secondary{background:#e5eef2;color:var(--navy)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.tab.active{background:var(--blue);color:white}
+.panel{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 18px #1834480a}
+.panel.active{display:block}
+h2{font-size:20px;margin:0 0 12px}
+h3{font-size:16px;margin:18px 0 8px}
+.hint{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.drop{border:2px dashed #b7c9d2;border-radius:13px;padding:18px;text-align:center;background:#f8fbfc}
+input[type=file],input[type=text],select,textarea{max-width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:white}
+.preview{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.preview img{max-width:210px;max-height:240px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:4px;background:#fff}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.notice{background:#fff8e7;border:1px solid #f0d99d;padding:12px;border-radius:10px;font-size:14px}
+.card{border:1px solid var(--line);border-radius:12px;padding:14px}
+.step{margin:10px 0;padding-left:4px}
+.step b{color:var(--blue)}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:25px}
+canvas{max-width:100%;border:1px solid var(--line);border-radius:8px}
+@media print{header,.tabs,.no-print,footer{display:none!important}.panel{display:none!important}#print
